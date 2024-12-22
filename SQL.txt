@@ -1,0 +1,17 @@
+1)CREATE TABLE Students(
+  Student_id INT
+  Name VARCHAR(50)
+  );
+2)CREATE TABLE Course(
+  Course_id INT
+  Course_name VARCHAR(50)
+  );
+
+3)CREATE TABLE Enrollment (
+  Student_id INT,
+  Course_id INT,
+  FOREIGN KEY (Student_id) REFERENCES Students(Student_id),
+  FOREIGN KEY (Course_id) REFERENCES Courses(Course_id),
+  PRIMARY KEY (Student_id, Course_id)
+);
+4)
